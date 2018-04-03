@@ -1,6 +1,9 @@
 # command to run in bash/cmd:
-# python3.exe test.py .\config
-from coinbase.wallet.client import Client
+# python3.exe functions.py
+
+
+# from coinbase.wallet.client import Client
+import coinbase
 import sys
 
 # this function will use our API that we have for coinbase.com, ricky created
@@ -28,10 +31,13 @@ def readFile(f):
 
 # print command line arguments
 def main():
+	get_price_from_coinbase("2018", "USD", "USD")
+	get_price_from_coinbase(2018, "USD", "USD")
+
 	# print command line arguments
-	for arg in sys.argv[1:]:
-		print(arg)              #The file you want to read
-		readFile(arg)           #Reading the file with the readFile() method
+	# for arg in sys.argv[1:]:
+	# 	print(arg)              #The file you want to read
+	# 	readFile(arg)           #Reading the file with the readFile() method
 
 if __name__ == "__main__":
 	main()
